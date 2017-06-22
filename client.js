@@ -29,14 +29,15 @@ function getRandomAnswer() {
 
 function eventListener() {
   $('.container').on('click', '#shake', function() {
-    console.log('shake button clicked!');
+    $(".answer").children().last().hide();
     appendDom();
   });
 
 function appendDom() {
-  $('.container').append("<div class='answer'></div>");
-    var $el = $(".container").children().last();
+  $('.answer').append("<div></div>");
+    var $el = $(".answer").children().last();
     $el.append("<p>" + getRandomAnswer() + "</p>");
+    $el.fadeOut(5000);
   }
 
 }

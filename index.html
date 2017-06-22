@@ -4,16 +4,25 @@
     <meta charset="utf-8">
     <title>Magic 8 Ball</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="client.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1>Ask me a question!</h1>
-      <button id="shake">Shake the 8 Ball!</button>
+
+      <div class="row">
+        <div class="col-md-12 jumbotron">
+          <h1>Ask me a question!</h1>
+          <button type="button" class="btn btn-primary" id="shake">Shake the 8 Ball!</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 answer">
+        </div>
+      </div>
     </div>
-    <div class="answer">
-      
-    </div>
+
   </body>
 </html>
