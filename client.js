@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('jQuery loaded!');
   eventListener();
 });
 
@@ -19,20 +18,21 @@ var responses = [
   'YAAASSSS!'
 ];
 
-var randomElement;
-
+//returns a random answer from the responses array
 function getRandomAnswer() {
   var randomIndex = Math.floor(Math.random() * responses.length);
   var randomElement = responses[randomIndex];
   return randomElement;
 }
 
+//on click, hides any existing responses and runs appendDom
 function eventListener() {
   $('.container').on('click', '#shake', function() {
     $(".answer").children().last().hide();
     appendDom();
   });
 
+//appends a random answer to the DOM & fades it out
 function appendDom() {
   $('.answer').append("<div></div>");
     var $el = $(".answer").children().last();
